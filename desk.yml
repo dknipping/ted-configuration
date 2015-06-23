@@ -5,9 +5,13 @@ spring:
         admin:
             url: http://localhost:9000
 eureka:
+    instance:
+            preferIpAddress: true
+            statusPageUrlPath: ${management.contextPath}/info
+            healthCheckUrlPath: ${management.contextPath}/health
     client:
         serviceUrl:
-            defaultZone: ${eureka.uri:http://127.0.0.1:9010}/eureka/
+            defaultZone: ${eureka.uri:http://127.0.0.1:9010}/eureka/,${eureka.uri:http://127.0.0.1:9011}/eureka/
             
 management:
     contextPath: /management
