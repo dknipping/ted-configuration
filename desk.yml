@@ -6,7 +6,6 @@ spring:
             url: http://localhost:9000
 eureka:
     instance:
-            preferIpAddress: true
             statusPageUrlPath: ${management.contextPath}/info
             healthCheckUrlPath: ${management.contextPath}/health
     client:
