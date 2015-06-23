@@ -3,7 +3,7 @@ server:
 spring:
     boot:
         admin:
-            url: http://localhost:9000
+            url: http://localhost:9050
 eureka:
     instance:
             statusPageUrlPath: ${management.contextPath}/info

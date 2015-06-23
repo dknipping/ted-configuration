@@ -1,9 +1,6 @@
 server:
-    port: ${PORT:9020}
-spring:
-    boot:
-        admin:
-            url: http://localhost:9050
+    port: ${PORT:9050}
+
 eureka:
     instance:
             statusPageUrlPath: ${management.contextPath}/info
@@ -11,6 +8,9 @@ eureka:
     client:
         serviceUrl:
             defaultZone: ${eureka.uri:http://127.0.0.1:9010}/eureka/,${eureka.uri:http://127.0.0.1:9011}/eureka/
-            
+spring:
+    boot:
+        admin:
+            url: http://localhost:${server.port}
 management:
     contextPath: /management
