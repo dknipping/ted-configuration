@@ -11,7 +11,7 @@ eureka:
             healthCheckUrlPath: ${management.contextPath}/health
     client:
         serviceUrl:
-            defaultZone: ${eureka.uri:http://127.0.0.1:9010}/eureka/,${eureka.uri:http://127.0.0.1:9011}/eureka/
+            defaultZone: ${eureka1.uri:http://127.0.0.1:9010}/eureka/,${eureka2.uri:http://127.0.0.1:9011}/eureka/
             
 management:
     contextPath: /management
